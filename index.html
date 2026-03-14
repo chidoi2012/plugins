@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Minecraft Plugin Hub</title>
+<title>Minecraft Plugin Download</title>
 
 <style>
 
@@ -11,14 +11,16 @@ background:#0f172a;
 color:white;
 font-family:Arial;
 text-align:center;
+margin:0;
 }
 
 h1{
 color:#38bdf8;
+margin-top:30px;
 }
 
 .search{
-width:350px;
+width:320px;
 padding:12px;
 border-radius:8px;
 border:none;
@@ -30,24 +32,34 @@ display:flex;
 flex-wrap:wrap;
 justify-content:center;
 margin-top:30px;
+padding-bottom:40px;
 }
 
 .card{
 background:#1e293b;
-width:260px;
-margin:10px;
+width:250px;
+margin:12px;
 padding:20px;
-border-radius:10px;
+border-radius:12px;
+}
+
+.card h3{
+margin:0;
 }
 
 .btn{
 display:inline-block;
-margin-top:10px;
-padding:10px 14px;
+margin-top:12px;
+padding:10px 16px;
 background:#22c55e;
 color:white;
 text-decoration:none;
 border-radius:6px;
+font-weight:bold;
+}
+
+.btn:hover{
+background:#16a34a;
 }
 
 </style>
@@ -57,44 +69,44 @@ border-radius:6px;
 
 <h1>⚡ Minecraft Plugin Download</h1>
 
-<input class="search" type="text" id="search" placeholder="Tìm plugin..." onkeyup="searchPlugin()">
+<input class="search" id="search" type="text" placeholder="Tìm plugin..." onkeyup="searchPlugin()">
 
 <div class="container" id="plugins">
 
 <div class="card">
 <h3>EssentialsX</h3>
 <p>Plugin SMP cơ bản</p>
-<a class="btn" href="https://github.com/EssentialsX/Essentials/releases/latest/download/EssentialsX.jar">Download</a>
+<a class="btn" href="https://github.com/EssentialsX/Essentials/releases/latest/download/EssentialsX.jar" target="_blank">Download</a>
 </div>
 
 <div class="card">
 <h3>LuckPerms</h3>
 <p>Plugin quản lý quyền</p>
-<a class="btn" href="https://download.luckperms.net/1515/bukkit/loader/LuckPerms-Bukkit.jar">Download</a>
+<a class="btn" href="https://download.luckperms.net/1515/bukkit/loader/LuckPerms-Bukkit.jar" target="_blank">Download</a>
 </div>
 
 <div class="card">
 <h3>WorldEdit</h3>
 <p>Xây dựng map nhanh</p>
-<a class="btn" href="https://dev.bukkit.org/projects/worldedit/files/latest">Download</a>
+<a class="btn" href="https://modrinth.com/plugin/worldedit" target="_blank">Download</a>
 </div>
 
 <div class="card">
 <h3>WorldGuard</h3>
 <p>Bảo vệ khu vực</p>
-<a class="btn" href="https://dev.bukkit.org/projects/worldguard/files/latest">Download</a>
+<a class="btn" href="https://modrinth.com/plugin/worldguard" target="_blank">Download</a>
 </div>
 
 <div class="card">
 <h3>PlaceholderAPI</h3>
 <p>Hiển thị placeholder</p>
-<a class="btn" href="https://github.com/PlaceholderAPI/PlaceholderAPI/releases/latest/download/PlaceholderAPI.jar">Download</a>
+<a class="btn" href="https://github.com/PlaceholderAPI/PlaceholderAPI/releases/latest" target="_blank">Download</a>
 </div>
 
 <div class="card">
 <h3>Vault</h3>
 <p>Plugin economy API</p>
-<a class="btn" href="https://www.spigotmc.org/resources/vault.34315/">Download</a>
+<a class="btn" href="https://www.spigotmc.org/resources/vault.34315/" target="_blank">Download</a>
 </div>
 
 </div>
@@ -103,12 +115,12 @@ border-radius:6px;
 
 function searchPlugin(){
 
-let input = document.getElementById("search").value.toLowerCase();
-let cards = document.querySelectorAll(".card");
+let input=document.getElementById("search").value.toLowerCase();
+let cards=document.querySelectorAll(".card");
 
-cards.forEach(card => {
+cards.forEach(card=>{
 
-let text = card.innerText.toLowerCase();
+let text=card.innerText.toLowerCase();
 
 if(text.includes(input)){
 card.style.display="block";
@@ -123,4 +135,4 @@ card.style.display="none";
 </script>
 
 </body>
-  </html>
+</html>
