@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Minecraft Plugin Hub</title>
+
+<style>
+
+body{
+background:#0f172a;
+color:white;
+font-family:Arial;
+text-align:center;
+}
+
+h1{
+color:#38bdf8;
+}
+
+.search{
+width:350px;
+padding:12px;
+border-radius:8px;
+border:none;
+margin-top:20px;
+}
+
+.container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+margin-top:30px;
+}
+
+.card{
+background:#1e293b;
+width:260px;
+margin:10px;
+padding:20px;
+border-radius:10px;
+}
+
+.btn{
+display:inline-block;
+margin-top:10px;
+padding:10px 14px;
+background:#22c55e;
+color:white;
+text-decoration:none;
+border-radius:6px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>⚡ Minecraft Plugin Download</h1>
+
+<input class="search" type="text" id="search" placeholder="Tìm plugin..." onkeyup="searchPlugin()">
+
+<div class="container" id="plugins">
+
+<div class="card">
+<h3>EssentialsX</h3>
+<p>Plugin SMP cơ bản</p>
+<a class="btn" href="https://github.com/EssentialsX/Essentials/releases/latest/download/EssentialsX.jar">Download</a>
+</div>
+
+<div class="card">
+<h3>LuckPerms</h3>
+<p>Plugin quản lý quyền</p>
+<a class="btn" href="https://download.luckperms.net/1515/bukkit/loader/LuckPerms-Bukkit.jar">Download</a>
+</div>
+
+<div class="card">
+<h3>WorldEdit</h3>
+<p>Xây dựng map nhanh</p>
+<a class="btn" href="https://dev.bukkit.org/projects/worldedit/files/latest">Download</a>
+</div>
+
+<div class="card">
+<h3>WorldGuard</h3>
+<p>Bảo vệ khu vực</p>
+<a class="btn" href="https://dev.bukkit.org/projects/worldguard/files/latest">Download</a>
+</div>
+
+<div class="card">
+<h3>PlaceholderAPI</h3>
+<p>Hiển thị placeholder</p>
+<a class="btn" href="https://github.com/PlaceholderAPI/PlaceholderAPI/releases/latest/download/PlaceholderAPI.jar">Download</a>
+</div>
+
+<div class="card">
+<h3>Vault</h3>
+<p>Plugin economy API</p>
+<a class="btn" href="https://www.spigotmc.org/resources/vault.34315/">Download</a>
+</div>
+
+</div>
+
+<script>
+
+function searchPlugin(){
+
+let input = document.getElementById("search").value.toLowerCase();
+let cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+
+let text = card.innerText.toLowerCase();
+
+if(text.includes(input)){
+card.style.display="block";
+}else{
+card.style.display="none";
+}
+
+});
+
+}
+
+</script>
+
+</body>
+  </html>
