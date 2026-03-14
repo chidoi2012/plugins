@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Minecraft Plugin Download</title>
+<title>Minecraft Plugin Finder</title>
 
 <style>
 
@@ -32,34 +32,24 @@ display:flex;
 flex-wrap:wrap;
 justify-content:center;
 margin-top:30px;
-padding-bottom:40px;
 }
 
 .card{
 background:#1e293b;
-width:250px;
-margin:12px;
+width:240px;
+margin:10px;
 padding:20px;
-border-radius:12px;
-}
-
-.card h3{
-margin:0;
+border-radius:10px;
 }
 
 .btn{
 display:inline-block;
 margin-top:12px;
-padding:10px 16px;
+padding:10px 15px;
 background:#22c55e;
 color:white;
 text-decoration:none;
 border-radius:6px;
-font-weight:bold;
-}
-
-.btn:hover{
-background:#16a34a;
 }
 
 </style>
@@ -71,23 +61,23 @@ background:#16a34a;
 
 <input class="search" id="search" type="text" placeholder="Tìm plugin..." onkeyup="searchPlugin()">
 
-<div class="container" id="plugins">
+<div class="container">
 
 <div class="card">
 <h3>EssentialsX</h3>
 <p>Plugin SMP cơ bản</p>
-<a class="btn" href="https://essentialsx.net/downloads" target="_blank">Download</a>
+<a class="btn" href="https://essentialsx.net/downloads.html" target="_blank">Download</a>
 </div>
 
 <div class="card">
 <h3>LuckPerms</h3>
 <p>Plugin quản lý quyền</p>
-<a class="btn" href="https://download.luckperms.net/1515/bukkit/loader/LuckPerms-Bukkit.jar" target="_blank">Download</a>
+<a class="btn" href="https://luckperms.net/download" target="_blank">Download</a>
 </div>
 
 <div class="card">
 <h3>WorldEdit</h3>
-<p>Xây dựng map nhanh</p>
+<p>Xây dựng map</p>
 <a class="btn" href="https://modrinth.com/plugin/worldedit" target="_blank">Download</a>
 </div>
 
@@ -100,12 +90,12 @@ background:#16a34a;
 <div class="card">
 <h3>PlaceholderAPI</h3>
 <p>Hiển thị placeholder</p>
-<a class="btn" href="https://github.com/PlaceholderAPI/PlaceholderAPI/releases/latest" target="_blank">Download</a>
+<a class="btn" href="https://www.spigotmc.org/resources/placeholderapi.6245/" target="_blank">Download</a>
 </div>
 
 <div class="card">
 <h3>Vault</h3>
-<p>Plugin economy API</p>
+<p>Economy API</p>
 <a class="btn" href="https://www.spigotmc.org/resources/vault.34315/" target="_blank">Download</a>
 </div>
 
@@ -119,7 +109,6 @@ let input=document.getElementById("search").value.toLowerCase();
 let cards=document.querySelectorAll(".card");
 
 cards.forEach(card=>{
-
 let text=card.innerText.toLowerCase();
 
 if(text.includes(input)){
